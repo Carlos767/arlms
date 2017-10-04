@@ -2,54 +2,16 @@
 <html>
   <head>
     <title>AR LMS</title>
-    <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <%= csrf_meta_tags %>
   </head>
-
   <body>
-    <!-- Dropdown Structure -->
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!">My Profile</a></li>
-      <li><a href="#!">My Courses</a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Log Out</a></li>
-    </ul>
-
-    <ul id="dropdown2" class="dropdown-content">
-      <li><a href="#!">My Profile</a></li>
-      <li><a href="#!">My Courses</a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Log Out</a></li>
-    </ul>
-
-    <header>
-      <nav class="orange lighten-2 z-depth-2">
-        <div class="container">
-          <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">AR Learning Center</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">AR Wiki</a></li>
-              <li><a href="#">Login</a></li>
-              <!-- Dropdown Trigger -->
-              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Carlos Parrilla<i class="material-icons right">arrow_drop_down</i></a></li>
-          
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">AR Wiki</a></li>
-              <li><a href="#">Login</a></li>
-              <!-- Dropdown Trigger -->
-              <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Carlos Parrilla<i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    
+    <%= render partial: "shared/header" %>
+    <%= render partial: "shared/message" %>
+   
 
     <main>
       <div class="container">
@@ -57,31 +19,7 @@
       </div>
     </main>
 
-    <footer class="page-footer blue lighten-1">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid odio omnis eum. Praesentium asperiores natus neque recusandae beatae dignissimos quaerat numquam labore, temporibus molestias, exercitationem accusamus nobis ad magni laudantium.</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Resources</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">AR Wiki</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Compass</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">My Page</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Apple Web</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-        © 2017 Copyright Carlos Parrilla
-        <%= link_to "About Us", pages_about_path, :class => "grey-text text-lighten-2 right" %>
-        </div>
-      </div>
-    </footer>
+    <% render partial: "shared/footer" %>
 
   </body>
 
